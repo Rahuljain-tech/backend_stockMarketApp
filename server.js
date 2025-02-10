@@ -5,10 +5,10 @@ import axios from 'axios';
 import cors from 'cors';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(json());
 
 // Create a session store to maintain cookies
